@@ -1,4 +1,4 @@
-# #BookingApp - React CRUD Web Application
+#BookingApp - React CRUD Web Application
 
 This is a documentation file for a MERN (MongoDB, Express.js, React, Node.js) stack-based booking application. The application allows users to book appointments or reservations for various services, such as restaurants, salons, or other service providers.
 
