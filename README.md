@@ -73,7 +73,7 @@ The app should be running at **`http://localhost:3000`**.
 The project is organized into two main directories: **`backend`** and **`frontend`**. The **`backend`** directory contains the server-side code, while the **`frontend`** directory contains the client-side code.
 
 ```arduino
-mern-booking-app/
+booking-app/
 │
 ├── backend/
 │   ├── config/
@@ -106,14 +106,14 @@ MongoDB is used as the database for this application. Ensure that you have Mongo
 
 ## **Deployment**
 
-To deploy this MERN stack booking app to a production server, you can follow the deployment guides for your specific hosting environment. Popular choices include AWS, Heroku, or Vercel for the frontend and MongoDB Atlas for the database.
+To deploy this MERN stack booking app to a production server, you can follow the deployment guides for your specific hosting environment. Popular choices include Azur DevOps, AWS, Heroku, or Vercel for the frontend and MongoDB Atlas for the database.
 
 ## **Contributing**
 
 If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the repository on GitHub.
-2. Create a new branch with a descriptive name for your feature or bug fix.
+2. Create a new branch with a descriptive name for your feature or bugfix.
 3. Make your changes and submit a pull request.
 
 ## **License**
