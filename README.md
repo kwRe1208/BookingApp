@@ -4,16 +4,16 @@ This is a documentation file for a MERN (MongoDB, Express.js, React, Node.js) st
 
 ## **Table of Contents**
 
-1. [Introduction](https://#introduction)
-2. [Prerequisites](https://#prerequisites)
-3. [Getting Started](https://#getting-started)
-4. [Folder Structure](https://#folder-structure)
-5. [Backend](https://#backend)
-6. [Frontend](https://#frontend)
-7. [Database](https://#database)
-8. [Deployment](https://#deployment)
-9. [Contributing](https:///#contributing)
-10. [License](https://#license)
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Getting Started](#getting-started)
+4. [Folder Structure](#folder-structure)
+5. [Backend](#backend)
+6. [Frontend](#frontend)
+7. [Database](#database)
+8. [Deployment](#deployment)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ## **Introduction**
 
