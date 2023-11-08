@@ -1,6 +1,9 @@
 name: Super-Linter
 
-on: push
+on:
+  push:
+    branches:
+      - main # You can specify the branch you want to trigger this workflow on
 
 jobs:
   super-lint:
