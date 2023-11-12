@@ -114,7 +114,7 @@ If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the repository on GitHub.
 2. Create a new branch with a descriptive name for your feature or bugfix.
-3. Make your changes and submit a pull request.
+3. Make your changes, push to the Dev branch, and submit a pull request.
 
 ## **License**
 
