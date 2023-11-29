@@ -7,7 +7,7 @@
 } */
 
 .header {
-    background-image: url("C:\Users\Kirstin Ramos\source\repos\BookingApp\BookingApp\client\public\header.jpg");
+    background-image: url("/public/header.jpg");
     background-size: cover;
     color: white;
     display: flex;
