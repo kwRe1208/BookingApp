@@ -4,7 +4,7 @@ import React from 'react';
 //import { BCImage } from '../../../public/img/BC.jpg';
 
 const Featured = () => {
-    const { data, loading, error } = useFetch("/hotels/countByCity?cities=Berlin,Madrid,London")
+    const { data, loading, error } = useFetch("/hotels/countByCity?cities=Toronto,Vancouver,Winnepeg")
 
     return (
         <div className="featured">
@@ -18,7 +18,7 @@ const Featured = () => {
                             alt=""
                         />
                         <div className="featuredTitles">
-                            <h1>Berlin</h1>
+                            <h1>Toronto</h1>
                             <h2>{data[0]} properties</h2>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ const Featured = () => {
                             alt=""
                         />
                         <div className="featuredTitles">
-                            <h1>Madrid</h1>
+                            <h1>Vancouver</h1>
                             <h2>{data[1]} properties</h2>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const Featured = () => {
                             alt=""
                         />
                         <div className="featuredTitles">
-                            <h1>London</h1>
+                            <h1>Winnepeg</h1>
                             <h2>{data[2]} properties</h2>
                         </div>
                     </div>

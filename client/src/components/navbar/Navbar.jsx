@@ -2,16 +2,18 @@ import { useContext } from "react";
 import "./navbar.css"
 import { Link } from "react-router-dom"
 import { AuthContext } from "../../context/AuthContext";
+// import DevsquadLogo from './devsquad.jpg';
 
 const Navbar = () => {
     const { user } = useContext(AuthContext);
-    
+
     return (
         <div className="navbar">
             <div className="navContainer">
                 <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
                     <span className="logo">
-                        DEVSQUAD's BOOKING APP
+                        {/* Replace text with image */}
+                        {/* <img src={DevsquadLogo} alt="Devsquad Booking App Logo" /> */}
                     </span>
                 </Link>
                 {user ? user.username : (
@@ -23,6 +25,6 @@ const Navbar = () => {
             </div>
         </div>
     )
-}
+};
 
 export default Navbar

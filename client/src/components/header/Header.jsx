@@ -79,9 +79,9 @@ const Header = ({ type }) => {
                 </div>
                 {
                     type !== "list" &&
-                    <><h1 className="headerTitle">A  lifetime of discounts? It's Genius.</h1>
+                    <><h1 className="headerTitle">Unlock Your Next Canadian Adventure with Seamless Renting</h1>
                         <p className="headerDesc">
-                            Get rewarded for your travels - unlock instant savings of 10% or more with a free BookingApp account
+                            Where Convenience Meets Choice! Your first book is on us, register now!
                         </p>
                         {!user && <button className="headerBtn">Sign in / Register</button>}
                         <div className="headerSearch">

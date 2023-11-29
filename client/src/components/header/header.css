@@ -1,10 +1,20 @@
-.header{
+/* .header{
     background-color: #003580;
     color: white;
     display: flex;
     justify-content: center;
     position: relative;
+} */
+
+.header {
+    background-image: url("/public/header.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
+
 
 .headerContainer{
     width: 100%;
