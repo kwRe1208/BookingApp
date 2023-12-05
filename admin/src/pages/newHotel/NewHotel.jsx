@@ -6,12 +6,13 @@ import { useState } from "react";
 import { hotelInputs } from "../../formSource";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const NewHotel = () => {
   const [files, setFiles] = useState("");
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
-
+  const navigate = useNavigate();
   const { data, loading, error } = useFetch("/rooms")
 
   const handleChange = (e) => {
@@ -38,7 +39,8 @@ const NewHotel = () => {
             "https://api.cloudinary.com/v1_1/daf5dolsf/image/upload",
             data
           );
-
+          
+          navigate("/hotels");
           const { url } = uploadRes.data;
           return url;
         })

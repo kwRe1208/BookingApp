@@ -30,7 +30,6 @@ const SearchItem = ({ item }) => {
                     <Link to={`/hotels/${item._id}`}>
                         <button className="siCheckButton">See availability</button>
                     </Link>
-                    <button className="siCheckButton">See availability</button>
                 </div>
             </div>
 
