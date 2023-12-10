@@ -2,7 +2,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
-import New from "./pages/new/New";
+import NewUser from "./pages/newUser/NewUser";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
@@ -12,6 +12,9 @@ import { AuthContext } from "./context/AuthContext";
 import { hotelColumns, productColumns, roomColumns, userColumns } from "./datatablesource";
 import NewHotel from "./pages/newHotel/NewHotel";
 import NewRoom from "./pages/newRoom/NewRoom";
+import EditUser from "./pages/editUser/EditUser";
+import EditHotel from "./pages/editHotel/EditHotel";
+import EditRoom from "./pages/editRoom/EditRoom";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -50,7 +53,7 @@ function App() {
                 }
               />
               <Route
-                path=":userId"
+                path=":id"
                 element={
                   <ProtectedRoute>
                     <Single />
@@ -61,7 +64,15 @@ function App() {
                 path="new"
                 element={
                   <ProtectedRoute>
-                    <New inputs={userInputs} title="Add New User" />
+                    <NewUser inputs={userInputs} title="Add New User" />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path=":id/edit"
+                element={
+                  <ProtectedRoute>
+                    <EditUser inputs={userInputs} title="View User" />
                   </ProtectedRoute>
                 }
               />
@@ -76,18 +87,18 @@ function App() {
                 }
               />
               <Route
-                path=":userId"
-                element={
-                  <ProtectedRoute>
-                    <Single />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
                 path="new"
                 element={
                   <ProtectedRoute>
                     <NewHotel />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="find/:id"
+                element={
+                  <ProtectedRoute>
+                    <EditHotel />
                   </ProtectedRoute>
                 }
               />
@@ -102,18 +113,18 @@ function App() {
                 }
               />
               <Route
-                path=":userId"
-                element={
-                  <ProtectedRoute>
-                    <Single />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
                 path="new"
                 element={
                   <ProtectedRoute>
                     <NewRoom />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path=":id"
+                element={
+                  <ProtectedRoute>
+                    <EditRoom />
                   </ProtectedRoute>
                 }
               />

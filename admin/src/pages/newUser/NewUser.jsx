@@ -1,4 +1,4 @@
-import "./new.scss";
+import "./newUser.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
@@ -40,7 +40,6 @@ const New = ({ inputs, title }) => {
     }
   };
 
-  console.log(info)
   return (
     <div className="new">
       <Sidebar />

@@ -11,10 +11,8 @@ const useFetch = (url) => {
             setLoading(true)
             try {
                 const res = await axios.get(url)
-                //const json = await res.json()
                 console.log(res.data)
                 setData(res.data)
-                //setLoading(false)
             } catch(err){
                 setError(err);
             }
@@ -27,9 +25,7 @@ const useFetch = (url) => {
         setLoading(true)
         try {
             const res = await axios.get(url)
-            //const json = await res.json()
             setData(res.data)
-            //setLoading(false)
         } catch(err){
             setError(err);
         }

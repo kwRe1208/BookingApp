@@ -27,9 +27,9 @@ const Sidebar = () => {
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">
-            <a href="/" class="logo">
-              <img src="./devsquad-logo.jpg" width="250px" alt="Devsquad's Booking App" />
-            </a>
+            <li href="/" className="logo">
+              <img src="/devsquad-logo.jpg" width="200px" alt="Devsquad's Booking App" />
+            </li>
           </span>
         </Link>
       </div>
@@ -63,10 +63,12 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="title">USER</p>
-          <li to="/rooms/login">
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
+          <Link to={`/users/${user._id}`} style={{ textDecoration: "none" }}>
+            <li>
+              <AccountCircleOutlinedIcon className="icon" />
+              <span>Profile</span>
+            </li>
+          </Link>
           <li onClick={handleLogout}>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>

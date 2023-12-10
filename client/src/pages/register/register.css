@@ -1,0 +1,79 @@
+.register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/public/header.jpg");
+  background-size: auto; /* Set background image size to auto */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center; /* Center the background image */
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;    
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-input {
+    margin-bottom: 15px;
+  }
+  
+  .file-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .register-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 2px;
+  }
+  
+  .back-button {
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+  }

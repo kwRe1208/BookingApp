@@ -23,6 +23,7 @@ export const createRoom = async (req, res, next) => {
 
 export const updateRoom = async (req, res, next) => {
     try {
+        console.log("heyyyy!!!", req.body);
         const updatedRoom = await Hotel.findByIdAndUpdate(
             req.params.id,
             { $set: req.body },
@@ -33,6 +34,20 @@ export const updateRoom = async (req, res, next) => {
         res.status(500).json(error)
     }
 }
+
+export const updateSingleRoom = async (req, res, next) => {
+    try {
+        const updatedRoom = await Room.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body },
+            { new: true }
+        );
+        res.status(200).json(updatedRoom);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+};
+
 export const updateRoomAvailability = async (req, res, next) => {
     try {
         await Room.updateOne(

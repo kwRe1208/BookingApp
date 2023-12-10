@@ -12,7 +12,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Header = ({ type }) => {
     const today = new Date();
-    const addOneDay=(date = new Date()) =>{
+    const addOneDay = (date = new Date()) => {
         const dateCopy = new Date(date);
 
         dateCopy.setDate(dateCopy.getDate() + 2);
@@ -37,8 +37,8 @@ const Header = ({ type }) => {
     })
 
     const navigate = useNavigate()
-    
-    const {user} = useContext(AuthContext);
+
+    const { user } = useContext(AuthContext);
 
     const handleOption = (name, operation) => {
         setOptions(prev => {
@@ -49,10 +49,10 @@ const Header = ({ type }) => {
         })
     }
 
-    const {dispatch} = useContext(SearchContext)
+    const { dispatch } = useContext(SearchContext)
 
     const handleSearch = () => {
-        dispatch({ type: "NEW_SEARCH", payload: { destination, dates:[dates], options } })
+        dispatch({ type: "NEW_SEARCH", payload: { destination, dates: [dates], options } })
         navigate("/hotels", { state: { destination, dates: [dates], options } })
     }
 
@@ -83,7 +83,6 @@ const Header = ({ type }) => {
                         <p className="headerDesc">
                             Where Convenience Meets Choice! Your first book is on us, register now!
                         </p>
-                        {!user && <button className="headerBtn">Sign in / Register</button>}
                         <div className="headerSearch">
                             <div className="headerSearchItem">
                                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
@@ -101,7 +100,7 @@ const Header = ({ type }) => {
                                 {openDate && (
                                     <DateRange
                                         editableDateInputs={true}
-                                        onChange={item => {setDates(item.selection)}}
+                                        onChange={item => { setDates(item.selection) }}
                                         moveRangeOnFirstSelection={false}
                                         ranges={[dates]}
                                         className="date"

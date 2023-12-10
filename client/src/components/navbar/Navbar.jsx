@@ -5,13 +5,21 @@ import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, dispatch } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        //user({ type: "LOGOUT" });
+        dispatch({ type: "LOGOUT" });
+        navigate("/");
+    };
+
+    const handleRegister = () => {
+        navigate("/register");
+    };
+
+    const handleLogin = () => {
         navigate("/login");
-      };
+    };
 
     return (
         <div className="navbar">
@@ -19,17 +27,21 @@ const Navbar = () => {
                 <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
                     <span className="logo">
                         <a href="/" class="logo">
-                            <img src="./devsquad-logo.jpg" width="250px" alt="DevSquad's Booking App" />
+                            <img src="/devsquad-logo.jpg" width="200px" alt="DevSquad's Booking App" />
                         </a>
                     </span>
                 </Link>
-                {user ? user.username : (
+                {user ? (
                     <div className="navItems">
-                        <button className="navButton">Register</button>
-                        <button className="navButton">Login</button>
+                        <span className="labelUser">Welcome, {user.username}</span>
+                        <button onClick={handleLogout} className="navButton">Logout</button>
+                    </div>
+                ) : (
+                    <div className="navItems">
+                        <button onClick={handleRegister} className="navButton">Register</button>
+                        <button onClick={handleLogin} className="navButton">Login</button>
                     </div>
                 )}
-                <button onClick={handleLogout} className="navButton">Logout</button>
             </div>
         </div>
     )

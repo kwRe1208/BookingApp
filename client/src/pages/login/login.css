@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("/public/header.jpg");
+    background-size: auto; /* Set background image size to auto */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
   }
   
   .lContainer {
@@ -17,13 +21,12 @@
   }
   
   .lButton {
-    border: none;
     padding: 10px 20px;
     background-color: #0071c2;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
+    border: none;
     cursor: pointer;
-    border-radius: 5px;
   }
   
   .lButton:disabled{

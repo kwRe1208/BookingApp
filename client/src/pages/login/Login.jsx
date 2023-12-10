@@ -18,6 +18,10 @@ const Login = () => {
         setCredentials(prev => ({...prev, [e.target.id]: e.target.value}))
     }
 
+    const handleHomePage = (e) => {
+        navigate("/");
+    };
+
     const handleClick = async (e) => {
         e.preventDefault();
         dispatch({type: "LOGIN_START"});
@@ -36,6 +40,9 @@ const Login = () => {
                 <input type="text" placeholder="username" id="username" onChange={handleChange} className="lInput" />
                 <input type="password" placeholder="password" id="password" onChange={handleChange} className="lInput" />
                 <button disabled={loading} onClick = {handleClick} className="lButton">Login</button>
+                <button onClick={handleHomePage} className="lButton">
+                    Back to Home page
+                </button>
                 { error && <span>{error.message}</span> }
             </div>
         </div>

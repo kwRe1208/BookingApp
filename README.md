@@ -66,7 +66,7 @@ To run the MERN stack booking app on your local machine, follow these steps:
     ```
     
 
-The app should be running at **`http://localhost:3000`**.
+The app should be running at **`http://localhost:8000`**.
 
 ## **Folder Structure**
 

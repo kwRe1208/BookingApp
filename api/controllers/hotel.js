@@ -60,16 +60,6 @@ export const getHotels = async (req, res, next) => {
     }
 };
 
-// export const getHotels=async(req,res,next)=>{
-//     try {
-//         const {limit,featured,city}=req.query;
-//         const hotels=await Hotel.find(city,featured).limit(limit);
-//         return res.status(200).json(hotels);
-//     } catch (err) {
-//         next(err);
-//     }
-// }
-
 export const countByCity = async (req, res, next) => {
     const cities = req.query.cities.split(",");
     try {
