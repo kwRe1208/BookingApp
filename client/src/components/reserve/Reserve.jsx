@@ -14,7 +14,6 @@ const Reserve = ({ setOpen, hotelId }) => {
   const { dates } = useContext(SearchContext);
 
   const getDatesInRange = (startDate, endDate) => {
-    console.log(startDate, endDate);
     const start = new Date(startDate);
     const end = new Date(endDate);
 
@@ -40,10 +39,6 @@ const Reserve = ({ setOpen, hotelId }) => {
     );
     return !isFound;
   };
-
-  // const isAvailable = (roomNumber) => { 
-  //   console.log(roomNumber.unavailableDates);
-  // }
 
   const handleSelect = (e) => {
     const checked = e.target.checked;

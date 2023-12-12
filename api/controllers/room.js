@@ -23,7 +23,7 @@ export const createRoom = async (req, res, next) => {
 
 export const updateRoom = async (req, res, next) => {
     try {
-        console.log("heyyyy!!!", req.body);
+        
         const updatedRoom = await Hotel.findByIdAndUpdate(
             req.params.id,
             { $set: req.body },

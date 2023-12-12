@@ -25,7 +25,6 @@ const EditUser = ({ inputs, title }) => {
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
-                console.log("userId", id);
                 const response = await axios.get(`/users/${id}`);
                 const { password, ...filteredUserData } = response.data;
                 setInfo(filteredUserData);

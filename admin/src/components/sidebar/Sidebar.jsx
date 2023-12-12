@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 const Sidebar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, clearUserAuth } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const { dispatch } = useContext(DarkModeContext);
@@ -20,6 +20,7 @@ const Sidebar = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     navigate("/login");
+    clearUserAuth();
   };
 
   return (

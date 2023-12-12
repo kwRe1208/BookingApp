@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: center;
     background-image: url("/public/header.jpg");
-    background-size: auto; /* Set background image size to auto */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-position: center; /* Center the background image */
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
   .lContainer {

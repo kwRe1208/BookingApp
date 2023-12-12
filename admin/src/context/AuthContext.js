@@ -46,13 +46,21 @@ export const AuthContextProvider = ({ children }) => {
         localStorage.setItem("user", JSON.stringify(state.user));
     }, [state.user]);
 
+    // Add a function to clear user authentication
+    const clearUserAuth = () => {
+        dispatch({ type: "CLEAR_USER_AUTH" });
+        // Clear user data from localStorage or perform other cleanup if needed
+        localStorage.removeItem("user");
+    };
+
     return (
         <AuthContext.Provider
             value={{
                 user: state.user,
                 loading: state.loading, 
                 error: state.error, 
-                dispatch
+                dispatch,
+                clearUserAuth
             }}
         >
             {children}
