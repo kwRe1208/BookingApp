@@ -1,0 +1,28 @@
+version: "3.2"
+services:
+  build-client:
+    image: build-client
+    stdin_open: true
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+  build-api:
+    image: build-api
+    environment:
+      - MONGO=mongodb+srv://kmmramos:NYwYMQuj6d9L0TcX@cluster0.rsugnbh.mongodb.net/?retryWrites=true&w=majority
+      - JWT=s/pJ7p4QyTOxqizx8CcMzA==
+    ports:
+      - "8800:8800"
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/src/app/node_modules
+  build-admin:
+    image: build-admin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./admin:/usr/src/app
+      - /usr/src/app/node_modules
+    
